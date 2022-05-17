@@ -1,14 +1,17 @@
 package peaksoft;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan(basePackages = "peaksoft")
 public class AppConfig {
 
     public void Cat() {
         System.out.println("Cat created");
     }
+
     @Bean(name="cat")
     public Cat cat1 (){
         return new Cat();
